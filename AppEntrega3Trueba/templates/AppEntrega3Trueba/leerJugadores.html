@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyendo jugadores</title>
+</head>
+<body>
+    
+{% for jugador in jugadores %}
+
+
+<li>Nombre: {{jugador.nombre}}  </li>
+<li>Apellido: {{jugador.apellido}}  </li>
+<li>Alias: {{jugador.alias}}  </li>
+<li>Fecha de nacimiento: {{jugador.fecha_nacimiento}}  </li>
+<li>Edad: {{jugador.edad}} años </li>
+<li>Nacionalidad: {{jugador.nacionalidad}}  </li>
+<li>Posición: {{jugador.posicion}}  </li>
+<li>Está retirado? {{jugador.esta_retirado}}  </li>
+<li>Goles totales: {{jugador.goles}}  </li>
+<li>Asistencias totales: {{jugador.asistencias}}  </li>
+<li>Cantidad de partidos: {{jugador.cant_partidos}}  </li>
+<li>Partidos ganados: {{jugador.partidos_ganados}}  </li>
+<li>Partidos empatados: {{jugador.partidos_empatados}}  </li>
+<li>Partidos perdidos: {{jugador.partidos_perdidos}}  </li>
+<li>Palmarés: {{jugador.palmares}}  </li>
+
+<button><a href="{% url 'EliminarJugador' jugador.nombre %}">Eliminar jugador</a></button>
+<button><a href="{% url 'EditarJugador' jugador.nombre %}">Editar jugador</a></button>
+
+<p>--------------------</p>
+
+
+
+
+
+{% endfor %}
+
+</body>
+</html>

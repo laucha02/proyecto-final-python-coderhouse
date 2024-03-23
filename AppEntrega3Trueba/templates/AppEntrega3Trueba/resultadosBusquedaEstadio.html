@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados búsqueda estadio</title>
+</head>
+<body>
+    
+
+    {% if estadios %}
+    <p>Buscando estadios con nombre fantasioso {{nombre_fant}}</p>
+    <ul>
+        {% for estadio in estadios %}
+        <li>Nombre: {{estadio.nombre}}  </li>
+        <li>Nombre Fantasioso: {{estadio.nombre_fant}}  </li>
+        <li>capacidad: {{estadio.capacidad}}  personas</li>
+        <li>ubicacion: {{estadio.ubicacion}}  </li>
+        <li>club: {{estadio.club}} </li>
+        <p>--------------------</p>
+        {% endfor %}
+    </ul>
+
+    {% endif %}
+</body>
+</html>

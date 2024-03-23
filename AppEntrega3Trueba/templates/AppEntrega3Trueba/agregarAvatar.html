@@ -1,0 +1,24 @@
+{% extends "AppEntrega3Trueba/padre.html" %}
+{% load static %}
+{% block title %}Agregar avatar{% endblock title %}Iniciar sesion
+
+{% block título %}
+
+
+Aca podemos agregar un avatar
+
+{% endblock %}
+
+{% block descripción %}
+
+<form action="" method="POST" enctype='multipart/form-data'> {% csrf_token %}
+
+
+    {{formulario.as_p}}
+
+    <button type="submit">Enviar</button>
+
+
+</form>
+
+{% endblock %}

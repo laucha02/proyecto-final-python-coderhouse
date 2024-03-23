@@ -1,0 +1,35 @@
+{% extends "AppEntrega3Trueba/padre.html" %}
+{% load static %}
+
+{%block title %}Lista de jugadores{% endblock %}
+
+{% block título %}
+
+
+<h1>Lista de jugadores</h1>
+{% endblock %}
+
+{% block info %}
+    
+    {% for jugador in object_list %}
+    <li>Nombre: {{jugador.nombre}}  </li>
+
+
+<button><a href="{% url 'DetalleJugador' jugador.id %}">Ver jugador</a></button>
+<button><a href="{% url 'ActualizarJugador' jugador.id %}">Actualizar jugador</a></button>
+<button><a href="{% url 'BorrarJugador' jugador.id %}">Eliminar jugador</a></button>
+
+
+
+<p></p>
+<p></p>
+
+
+
+
+
+{% endfor %}
+
+<button><a href="{% url 'CrearJugador' %}">Crear jugador</a></button>
+
+{% endblock %}

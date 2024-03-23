@@ -1,0 +1,16 @@
+{% extends "AppEntrega3Trueba/padre.html" %}
+{% load static %}
+
+{%block title %}Crear jugador{% endblock %}
+
+{% block título %}<h1>Crear jugador</h1> {% endblock %}
+
+{% block descripción %}
+    <form action="" method="post">  {% csrf_token %}
+
+        {{form.as_p}}
+
+        <input type="submit" value="Enviar">
+    </form>
+
+{% endblock %}

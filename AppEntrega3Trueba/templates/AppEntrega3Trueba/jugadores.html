@@ -1,0 +1,36 @@
+{% extends "AppEntrega3Trueba/padre.html" %}
+
+
+
+{% load static %}
+
+
+
+
+{% block título %}
+
+
+Jugadores
+
+{% endblock %}
+
+{% block descripción %}
+
+<h3>Agregar jugadores</h3>
+    {% if mi_formulario.errors %}
+    <div style="background-color: red;"><p>ERROR EN LOS DATOS</p></div>
+    {% endif %}
+
+    <form action=""    method="POST"> {% csrf_token %}
+       <table>
+
+        {{ mi_formulario.as_table }}
+       </table>
+                
+
+        <input type = "submit" value="Enviar">
+     </form>   
+
+     
+
+{% endblock %}

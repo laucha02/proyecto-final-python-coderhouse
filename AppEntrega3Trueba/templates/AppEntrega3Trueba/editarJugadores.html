@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar jugadores</title>
+</head>
+<body>
+    <form action=""    method="POST"> {% csrf_token %}
+        <table>
+ 
+         {{ mi_formulario.as_table }}
+        </table>
+                 
+ 
+         <input type = "submit" value="Enviar">
+      </form>   
+</body>
+</html>

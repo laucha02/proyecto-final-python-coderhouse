@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados búsqueda club</title>
+</head>
+<body>
+    
+
+    {% if clubes %}
+    <p>Buscando club con nombre  {{nombre}}</p>
+    <ul>
+        {% for club in clubes %}
+        <li>Nombre: {{club.nombre}}  </li>
+        <li>apodos: {{club.apodos}}  </li>
+        <li>socios: {{club.socios}}  </li>
+        <li>division: {{club.division}}  </li>
+        <li>fundacion: {{club.fundacion}} años </li>
+        <li>colores_principales: {{club.colores_principales}}  </li>
+        <p>--------------------</p>
+        {% endfor %}
+    </ul>
+
+    {% endif %}
+</body>
+</html>

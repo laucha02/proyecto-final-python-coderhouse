@@ -1,0 +1,20 @@
+{% extends "AppEntrega3Trueba/padre.html" %}
+{% load static %}
+
+{%block title %}Estadio {{estadio.nombre}}{% endblock %}
+
+{% block título %}
+
+    <h1>Nombre: {{estadio.nombre}}  </h1>
+{% endblock %}
+
+{% block descripción %}
+    <strong><h4><li>Nombre fantasioso: {{estadio.nombre_fant}}  </li>
+    <li>Capacidad: {{estadio.capacidad}}  </li>
+    <li>Ubicación: {{estadio.ubicacion}}  </li>
+    <li>Club: {{estadio.club}} </li>
+
+
+    <a href="{% url 'LeerEstadios' %}">Regresar</a></strong></h4>
+
+{% endblock %}
